@@ -1,0 +1,74 @@
+/* App.css - Base styles to support the exact Email Page layout */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: #e9e9e9;
+  color: #334155;
+  height: 100%;
+  width: 100%;
+}
+
+/* Page container - basic layout */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  margin-left: 235px; /* Sidebar width */
+  padding-top: 60px; /* Header height */
+  padding-bottom: 30px; /* Footer height */
+  background-color: #e9e9e9;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 235px;
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Header styling */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 235px; /* Match sidebar width */
+  height: 60px;
+  background-color: #333;
+  z-index: 100;
+}
+
+/* Footer styling */
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 235px; /* Match sidebar width */
+  height: 30px;
+  background-color: #e9e9e9;
+  border-top: 1px solid #e2e8f0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.copyright-link {
+  color: #4299e1;
+  text-decoration: none;
+}

@@ -1,0 +1,338 @@
+/* EmailPage.css - Updated with SearchBar component support */
+
+/* Basic page layout */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 235px; /* Sidebar width */
+  padding-top: 60px; /* Header height */
+  padding-bottom: 30px; /* Footer height */
+  background-color: #e9e9e9;
+  min-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+/* Email navigation */
+.email-navigation {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 0 15px 20px;
+  margin: 0;
+  color: #333;
+}
+
+.back-arrow {
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ADDED: Search container for EmailPage */
+.email-search-container {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 20px 15px 20px !important;
+  gap: 20px !important;
+}
+
+.clear-search-btn {
+  padding: 8px 16px !important;
+  background-color: #e2e8f0 !important;
+  color: #334155 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.clear-search-btn:hover {
+  background-color: #cbd5e1 !important;
+}
+
+/* Email sections with box layout */
+.email-sections {
+  display: flex;
+  margin: 0 20px;
+  gap: 20px;
+  height: calc(100vh - 150px);
+}
+
+/* INBOX section - left side */
+.inbox-section {
+  width: 350px; /* Fixed width */
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.inbox-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.inbox-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.inbox-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Email list */
+.email-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.email-item {
+  display: flex;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.email-item:hover {
+  background-color: #f8fafc;
+}
+
+.email-item.active {
+  background-color: #f0f9ff;
+}
+
+.email-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #222;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.email-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.email-sender {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.email-subject {
+  font-size: 13px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.email-time {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-left: auto;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+/* VIEW EMAIL section - right side */
+.email-view-section {
+  flex: 1;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.email-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.email-view-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.email-view-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Email fields */
+.email-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.email-field {
+  margin-bottom: 5px;
+}
+
+.field-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.field-value {
+  font-size: 14px;
+  color: #334155;
+}
+
+/* Message content */
+.message-content {
+  margin-top: 15px;
+}
+
+.message-content p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* Action buttons */
+.email-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.reply-btn, .forward-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.reply-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.forward-btn {
+  background-color: white;
+  color: #334155;
+  border: 1px solid #cbd5e0;
+}
+
+/* User profile icon */
+.user-profile-icon {
+  color: #3b82f6;
+  font-size: 20px;
+}
+
+/* Loading and error states */
+.loading-indicator {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.no-emails {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.no-email-selected {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.status-accepted {
+  background-color: #e3f9e5;
+  color: #0a8a18;
+}
+
+.status-rejected {
+  background-color: #ffecec;
+  color: #d63031;
+}
+
+.status-completed {
+  background-color: #e6f2ff;
+  color: #0066cc;
+}
+
+/* Email link styling */
+.email-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}

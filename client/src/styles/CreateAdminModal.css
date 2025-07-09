@@ -1,0 +1,272 @@
+/* styles/CreateAdminModal.css */
+/* Modal Container Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  /* Header Styling */
+  .modal-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  
+  .modal-header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-icon {
+    background-color: #f1f3f4;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #202124;
+  }
+  
+  .modal-close {
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  /* Body Styling */
+  .modal-body {
+    padding: 16px;
+  }
+  
+  .instruction-text {
+    color: #5f6368;
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  
+  .info-text {
+    color: #5f6368;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 14px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #202124;
+    font-size: 13px;
+  }
+  
+  .input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 32px;
+  }
+  
+  .input-with-icon:focus-within {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 1px #4285f4;
+  }
+  
+  .input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-right: 1px solid #dadce0;
+    background-color: #f8f9fa;
+  }
+  
+  .input-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 4px 8px;
+    border: none;
+    font-size: 13px;
+    outline: none;
+    height: 32px;
+  }
+  
+  /* Checkbox Styling */
+  .checkbox-container {
+    margin: 12px 0;
+  }
+  
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .form-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 2px solid #5f6368;
+    border-radius: 2px;
+    margin-right: 6px;
+  }
+  
+  .form-checkbox:checked ~ .checkbox-custom {
+    background-color: #4285f4;
+    border-color: #4285f4;
+  }
+  
+  .checkbox-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .form-checkbox:checked ~ .checkbox-custom:after {
+    display: block;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .checkbox-label {
+    font-size: 13px;
+    color: #202124;
+  }
+  
+  /* Button Styling */
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .primary-button, .cancel-button {
+    height: 56px;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 28px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .primary-button {
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    transition: background-color 0.2s;
+  }
+  
+  .primary-button:hover {
+    background-color: #339af0;
+  }
+  
+  .primary-button:disabled {
+    background-color: #a5d8ff;
+    cursor: not-allowed;
+  }
+  
+  .primary-button svg {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .cancel-button {
+    background-color: white;
+    color: #202124;
+    border: 1px solid #202124; /* Black border */
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #f1f3f4;
+  }
+  
+  .cancel-button svg {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Message Styling */
+  .error-message {
+    background-color: #fdeded;
+    color: #d93025;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .success-message {
+    background-color: #e6f4ea;
+    color: #137333;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }

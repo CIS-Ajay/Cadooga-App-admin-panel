@@ -1,0 +1,485 @@
+/* AdminPage.css - Independent styling for AdminPage only */
+
+/* ========== LAYOUT ========== */
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  padding-left: 240px;
+}
+
+/* ========== BACK NAVIGATION ========== */
+.back-navigation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #555;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-arrow {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* ========== ADMIN SECTION ========== */
+.admin-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ========== SEARCH AND CREATE BAR ========== */
+.search-export {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 20px;
+}
+
+.create-admin-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+.create-admin-button:hover {
+  background-color: #357abD;
+}
+
+.button-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ========== ADMIN TABLE STRUCTURE ========== */
+.user-table {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Admin Table Header */
+.user-table .table-header {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 100px;
+  background-color: #f5f7fa;
+  font-weight: 400;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  height: 36px;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-table .header-cell {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Email header should be left aligned */
+.user-table .header-cell:nth-child(2) {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+/* Admin Actions header - right aligned */
+.user-table .header-cell:last-child {
+  justify-content: center;
+  padding-right: 30px;
+}
+
+/* Admin Table Rows */
+.user-table .table-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 100px;
+  border-bottom: 1px solid #eee;
+  height: 56px;
+  align-items: center;
+}
+
+.user-table .table-row:last-child {
+  border-bottom: none;
+}
+
+.user-table .table-row:hover {
+  background-color: #f9fafb;
+}
+
+.user-table .row-cell {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Email column should be left aligned */
+.user-table .row-cell:nth-child(2) {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* ========== ADMIN TABLE CELL COMPONENTS ========== */
+/* Checkbox cell */
+.user-table .checkbox-cell {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+}
+
+.user-table .checkbox-cell input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #4a90e2;
+}
+
+/* Status badges */
+.user-table .status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.user-table .status-badge.active {
+  background-color: #e3f9e5;
+  color: #0a8a18;
+}
+
+.user-table .status-badge.expired {
+  background-color: #ffecec;
+  color: #d63031;
+}
+
+/* Account badges */
+.user-table .account-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.user-table .account-badge.admin {
+  background-color: #1e40af;
+}
+
+.user-table .account-badge.super-admin {
+  background-color: #e67700;
+}
+
+.user-table .account-badge.premium { 
+  background-color: #8b5cf6; 
+}
+
+.user-table .account-badge.subscriber { 
+  background-color: #8b5cf6; 
+}
+
+.user-table .account-badge.basic { 
+  background-color: #3b82f6; 
+}
+
+.user-table .account-badge.trial { 
+  background-color: #38bdf8; 
+}
+
+.user-table .account-badge.canceled { 
+  background-color: #f97316; 
+}
+
+.user-table .account-badge.none { 
+  background-color: #64748b; 
+}
+
+.user-table .account-badge.free { 
+  background-color: #64748b; 
+}
+
+.user-table .account-badge.banned { 
+  background-color: #ef4444; 
+}
+
+/* Actions cell */
+.user-table .actions-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 12px 16px;
+  padding-right: 30px;
+}
+
+.user-table .actions-cell .actions-menu-container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== LOADING AND ERROR STATES ========== */
+.loading, .empty-message {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* ========== MODAL STYLING ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+/* ========== FORM STYLING ========== */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+}
+
+.required {
+  color: #e53935;
+  margin-left: 2px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.submit-button:hover {
+  background-color: #357abD;
+}
+
+.cancel-button:disabled,
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+
+
+/* banned-users / banned users styling */
+
+
+.banned-count {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.status-badge.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.action-button.unban {
+  display: flex;
+  align-items: center;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.page-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

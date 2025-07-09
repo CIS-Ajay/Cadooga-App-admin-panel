@@ -1,0 +1,30 @@
+/* Footer.css - Updated for consistency with main layout */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 235px; /* Match sidebar width */
+  height: 30px;
+  background-color: #e9e9e9; /* Match main content background */
+  border-top: 1px solid #e2e8f0;
+  z-index: 90;
+}
+
+.footer-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.copyright-link {
+  color: #4299e1;
+  text-decoration: none;
+}

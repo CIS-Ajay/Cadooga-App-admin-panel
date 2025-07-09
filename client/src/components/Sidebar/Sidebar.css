@@ -1,0 +1,106 @@
+/* Sidebar.css - Matching the original email layout from the first screenshot */
+
+.sidebar {
+  width: 300px; /* Increased from 235px */
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  overflow-y: auto;
+  border-right: 1px solid #e2e8f0;
+}
+
+.logo-section {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 140px; /* Increased from 100px */
+  height: auto;
+}
+
+.admin-info {
+  padding: 0 20px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-name {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333 !important; /* Updated to the requested color with !important */
+}
+
+/* Additional specificity to ensure the color is applied */
+.sidebar .admin-info .admin-name {
+  color: #333333 !important;
+}
+
+/* Override any h3 default styles */
+.sidebar h3.admin-name {
+  color: #333333 !important;
+}
+
+.admin-title {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.navigation-section, .extras-section {
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.nav-heading {
+  padding: 0 10px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #64748b;
+  background-color: transparent;
+}
+
+.nav-item.active {
+  color: #3b82f6;
+  background-color: #eff6ff;
+  font-weight: 500;
+}
+
+.nav-icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.nav-text {
+  font-size: 14px;
+  white-space: nowrap;
+}

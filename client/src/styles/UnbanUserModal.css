@@ -1,0 +1,122 @@
+/* UnbanUserModal.css */
+.unban-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .unban-user-modal {
+    background-color: white;
+    border-radius: 16px;
+    width: 400px;
+    max-width: 95vw;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .unban-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .unban-close-button svg {
+    width: 20px;
+    height: 20px;
+    color: #94a3b8;
+  }
+  
+  .error-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #fef2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .error-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .unban-modal-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 16px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .unban-modal-message {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .confirm-button, 
+  .cancel-button {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .confirm-button {
+    background-color: #6ABE7E; /* Green color for unban */
+    color: white;
+    border: none;
+  }
+  
+  .confirm-button:hover {
+    background-color: #55A76A;
+  }
+  
+  .cancel-button {
+    background-color: white;
+    color: #333;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .cancel-button:hover {
+    background-color: #f8fafc;
+  }
+  
+  .confirm-button:disabled,
+  .cancel-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }

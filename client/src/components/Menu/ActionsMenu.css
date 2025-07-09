@@ -1,0 +1,65 @@
+/* ActionsMenu.css */
+.actions-menu-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actions-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .actions-button:hover {
+    color: #334155;
+  }
+  
+  /* Dropdown styling - absolute positioned with high z-index */
+  .actions-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 180px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e2e8f0;
+    z-index: 9999;
+    margin-top: 5px;
+  }
+  
+  /* Dropdown items */
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #334155;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f5f9;
+  }

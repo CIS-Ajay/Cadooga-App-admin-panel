@@ -1,0 +1,102 @@
+/* Header.css - Matching the original screenshot design */
+
+/* Header.css - Simple clean approach */
+
+.header {
+  background-color: #4a5568;
+  height: 50px;
+  display: flex;
+  align-items: flex-start; /* Change from center to flex-start */
+  justify-content: space-between;
+  padding: 0 20px; /* Remove vertical padding */
+  border-bottom: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Left align everything */
+  width: 100%;
+  margin-top: 15px;
+  gap: 15px; /* Space between profile section and mail icon */
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #6366f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer; /* Make it clickable */
+  transition: background-color 0.2s ease; /* Add hover effect */
+}
+
+.avatar:hover {
+  background-color: #5856eb; /* Slightly darker on hover */
+}
+
+.admin-name {
+  color: white !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dropdown-arrow {
+  color: white;
+  font-size: 8px;
+  margin-left: 5px;
+}
+
+.notification-icons {
+  display: flex;
+  align-items: center;
+}
+
+.mail-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -45px; /* Move it UP more to align with text */
+}
+
+.mail-icon::before {
+  content: "✉";
+  font-size: 22px; /* Make it bigger */
+  line-height: 1;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 600;
+}

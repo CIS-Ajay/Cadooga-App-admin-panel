@@ -1,0 +1,191 @@
+/* AdminLogin.css - Updated Version */
+/* Reset styles to minimize conflicts */
+.login-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Login page styles with proper specificity */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-color: #e9e9e9;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.login-container .login-card {
+  background-color: #f6f6f6;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 700px; /* Further increased max-width for a wider container */
+  padding: 50px; /* Further increased padding for more height */
+  text-align: center;
+}
+
+.login-container .logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Keep some spacing below */
+  margin-top: -50px; /* Increased negative margin to move it closer to the top */
+}
+
+.login-container .logo-container .logo {
+  width: 600px; /* Increased width for a larger logo */
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+/* Login heading styles */
+.login-container .login-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container .form-group {
+  margin-bottom: 5px; /* Reduced spacing */
+  position: relative;
+}
+
+.login-container .form-control {
+  width: 38%; /* Reduced from 40% to make the fields a tiny bit shorter in width */
+  padding: 12px 15px; /* Increased vertical padding from 10px to 12px to make fields taller */
+  border: 1px solid #c0c0c0; /* Slightly lighter border color */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center align */
+}
+
+.login-container .form-control:focus {
+  border-color: #0093fa;
+}
+
+/* Email input styling to match password input */
+.login-container .email-input {
+  position: relative;
+  width: 38%; /* Same width as password input */
+  margin: 0 auto; /* Center align */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Form control inside email input */
+.login-container .email-input .form-control {
+  width: 100%; /* Take full width of the parent container */
+  margin: 0; /* Reset margin since parent is already centered */
+}
+
+/* Updated password input styling to match other form controls */
+.login-container .password-input {
+  position: relative;
+  width: 38%; /* Reduced from 40% to match the width of regular form controls */
+  margin: 0 auto; /* Center align */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Form control inside password input */
+.login-container .password-input .form-control {
+  width: 100%; /* Take full width of the parent container */
+  margin: 0; /* Reset margin since parent is already centered */
+}
+
+/* Eye icon positioned properly inside input */
+.login-container .password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container .eye-icon {
+  width: 20px;
+  height: 20px;
+  fill: #757575;
+  opacity: 0.6;
+}
+
+/* Updated forgot password section to be smaller and on different lines */
+.login-container .forgot-password-container {
+  text-align: center;
+  margin: 2px 0 15px; /* Reduced top and bottom margin */
+}
+
+.login-container .help-text {
+  color: #757575;
+  margin: 0 0 2px; /* Add small margin at bottom */
+  font-size: 12px; /* Reduced from 14px */
+  display: block; /* Put on separate line */
+}
+
+.login-container .forgot-password {
+  color: #0093fa;
+  text-decoration: underline; /* Added underline as requested */
+  font-size: 12px; /* Reduced from 14px */
+  font-weight: 500;
+  display: block; /* Put on separate line */
+}
+
+.login-container .login-button {
+  width: 38%; /* Match width of form controls, reduced from 40% */
+  padding: 12px;
+  background-color: #0093fa;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Reduced from 15px for less rounded corners */
+  font-size: 22px; /* Increased from 20px for a tiny bit bigger text */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 800; /* Increased from 700 for even thicker/bolder text */
+  margin: 45px auto 20px; /* Increased top margin from 35px to 45px */
+  display: block;
+}
+
+.login-container .login-button:hover {
+  background-color: #0085e6;
+}
+
+.login-container .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px; /* Reduced gap between icons */
+  transform: translateY(30px); /* Moves the icons 30px lower */
+}
+
+.login-container .social-icon {
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: 12px; /* Reduced font size */
+  width: 20px; /* Reduced width */
+  height: 20px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container .error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
