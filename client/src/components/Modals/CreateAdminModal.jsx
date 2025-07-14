@@ -11,7 +11,7 @@ const CreateAdminModal = ({ isOpen, onClose, onSuccess }) => {
     legal_first_name: '',
     legal_last_name: '',
     role: 1, // Admin role is always 1
-    is_email_verified: 1 // Auto-verify admin emails
+    is_email_verified: true // Auto-verify admin emails
   });
   
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ const CreateAdminModal = ({ isOpen, onClose, onSuccess }) => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? (checked ? 1 : 0) : value
+      [name]: type === 'checkbox' ? checked : value
     });
   };
 
@@ -72,7 +72,7 @@ const CreateAdminModal = ({ isOpen, onClose, onSuccess }) => {
           legal_first_name: '',
           legal_last_name: '',
           role: 1,
-          is_email_verified: 1
+          is_email_verified: true
         });
         
         // Notify parent component
@@ -244,7 +244,7 @@ const CreateAdminModal = ({ isOpen, onClose, onSuccess }) => {
                   type="checkbox"
                   id="is_email_verified"
                   name="is_email_verified"
-                  checked={formData.is_email_verified === 1}
+                  checked={formData.is_email_verified === true}
                   onChange={handleChange}
                   className="form-checkbox"
                 />

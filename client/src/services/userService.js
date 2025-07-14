@@ -5,6 +5,18 @@ const API_BASE_URL = '/api';
 const API_BASE_URI = process.env.REACT_APP_API_BASE_URL || "http://127.0.0.0:8010/api/v1";
 
 export class UserService {
+
+  // sendPasswordResetEmail
+  static async sendPasswordResetEmail(userId, email) {
+    try {
+      const response = await axios.post(`${API_BASE_URI}/admin/send-password-reset`, { email });
+      return response.data;
+    } catch (error) {
+      console.error(`Error sending password reset email for user ${userId}:`, error);
+      throw error;
+    }
+  }
+
   // Get all users with optional filters
   static async getUsers(filters = {}, page = 1, limit = 10) {
     try {
@@ -52,17 +64,20 @@ export class UserService {
     }
   }
   
-  // Reset user password
-  static async resetPassword(userId, newPassword) {
+  // Reset user password via token
+  static async resetPassword(token, password) {
     try {
-      const response = await axios.post(`${API_BASE_URI}/admin/users/${userId}/reset-password`, { newPassword });
+      const response = await axios.post(`${API_BASE_URI}/admin/users/reset-password`, {
+        token,
+        password,
+      });
       return response.data;
     } catch (error) {
-      console.error(`Error resetting password for user ${userId}:`, error);
+      console.error(`Error resetting password using token:`, error);
       throw error;
     }
   }
-  
+
   // Clear device ID
   static async clearDeviceId(userId) {
     try {

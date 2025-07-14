@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import AdminLayout from './components/layout/AdminLayout';
 import AdminLogin from './components/admin/AdminLogin';
+import ResetPassword from './components/admin/ResetPassword';
 import Dashboard from './components/admin/Dashboard';
 import BannedUsers from './components/admin/BannedUsers';
 import EmailPage from './components/admin/EmailPage';
@@ -49,7 +50,8 @@ const App = () => {
           {/* Public routes */}
           <Route path="/login" element={<AdminLogin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
-          
+          <Route path="/admin/reset-password" element={<ResetPassword />} />
+
           {/* Protected admin routes - Pages with their own layout */}
           <Route path="/admin/home" element={
             <ProtectedRoute>

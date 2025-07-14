@@ -42,7 +42,7 @@ const UserDetailsPage = () => {
   // Helper function to determine membership type
   const getMembershipType = (userData) => {
     // Check if user is banned (theliveapp_status = 0)
-    if (userData.theliveapp_status === 0) {
+    if (userData.theliveapp_status === false) {
       return 'Banned';
     }
     
@@ -136,7 +136,7 @@ const UserDetailsPage = () => {
           null,
         
         // Additional fields needed for ActionsMenu
-        isBanned: userData.theliveapp_status === 0,
+        isBanned: userData.theliveapp_status === false,
         username: userData.nickname || `${userData.legal_first_name || ''} ${userData.legal_last_name || ''}`.trim() || userData.email?.split('@')[0] || 'Unknown'
       };
       
