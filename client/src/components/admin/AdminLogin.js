@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import '../../styles/AdminLogin.css';
+import {Eye, EyeOff} from 'lucide-react';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -99,9 +100,11 @@ const AdminLogin = () => {
               className="password-toggle" 
               onClick={() => setShowPassword(!showPassword)}
             >
-              <svg viewBox="0 0 24 24" className="eye-icon">
-                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-              </svg>
+              {
+                showPassword ? 
+                <Eye className="nav-icon-login" /> : 
+                <EyeOff className="nav-icon-login" />
+              }
             </span>
           </div>
           
@@ -109,7 +112,7 @@ const AdminLogin = () => {
           
           <div className="forgot-password-container">
             <p className="help-text">Need help logging in?</p>
-            <a href="/forgot-password" className="forgot-password">Forgot My Password</a>
+            <Link to="/forgot-password" className="forgot-password" >Forgot My Password</Link>
           </div>
           
           <button 
@@ -124,11 +127,11 @@ const AdminLogin = () => {
         </form>
         
         <div className="social-icons">
-          <a href="#" className="social-icon">f</a>
-          <a href="#" className="social-icon">t</a>
-          <a href="#" className="social-icon">in</a>
-          <a href="#" className="social-icon">@</a>
-          <a href="#" className="social-icon">p</a>
+          <Link to="#" className="social-icon">f</Link>
+          <Link to="#" className="social-icon">t</Link>
+          <Link to="#" className="social-icon">in</Link>
+          <Link to="#" className="social-icon">@</Link>
+          <Link to="#" className="social-icon">p</Link>
         </div>
       </div>
     </div>

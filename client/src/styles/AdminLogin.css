@@ -20,6 +20,13 @@
   overflow: hidden;
 }
 
+.nav-icon-login {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
 .login-container .login-card {
   background-color: #f6f6f6;
   border-radius: 0;
@@ -130,7 +137,9 @@
   text-align: center;
   margin: 2px 0 15px; /* Reduced top and bottom margin */
 }
-
+.forgot-password-container1 {
+  margin: 8px 0 8px;
+}
 .login-container .help-text {
   color: #757575;
   margin: 0 0 2px; /* Add small margin at bottom */

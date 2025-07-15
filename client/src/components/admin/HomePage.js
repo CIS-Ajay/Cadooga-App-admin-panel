@@ -232,6 +232,9 @@ const HomePage = () => {
       case 'admins':
         navigate('/admin/admins');
         break;
+      case 'logs':
+        navigate('/admin/logs');
+        break;  
       default:
         break;
     }

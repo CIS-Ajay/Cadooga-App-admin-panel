@@ -3,16 +3,27 @@ import axios from 'axios';
 const API_BASE_URL = '/api';
 // const API_BASE_URI = process.env.REACT_APP_API_BASE_URL;
 const API_BASE_URI = process.env.REACT_APP_API_BASE_URL || "http://127.0.0.0:8010/api/v1";
+const PYTHON_API_URL = process.env.PYTHON_API_URL || "http://192.168.2.216:8001";
 
 export class UserService {
 
+  // Get use Logs
+  static async getUserLogs() {
+    try {
+      const response = await axios.get(`${PYTHON_API_URL}/logs`);
+      return response;
+    } catch (error) {
+      console.error('Error fetching user statistics:', error);
+      throw error;
+    }
+  }
   // sendPasswordResetEmail
-  static async sendPasswordResetEmail(userId, email) {
+  static async sendPasswordResetEmail(email) {
     try {
       const response = await axios.post(`${API_BASE_URI}/admin/send-password-reset`, { email });
       return response.data;
     } catch (error) {
-      console.error(`Error sending password reset email for user ${userId}:`, error);
+      console.error(`Error sending password reset email for user ${email}:`, error);
       throw error;
     }
   }
@@ -150,13 +161,10 @@ export class UserService {
   
   // Get user statistics
   static async getUserStats() {
-    console.log('==================================================================')
     try {
+      this.getUserLogs();
       const API_BASE_URI = process.env.REACT_APP_API_BASE_URL;
-      console.log('API_BASE_URI:==========', API_BASE_URI);
-
       const response = await axios.get(`${API_BASE_URI}/admin/stats`);
-      console.log('response:export', response);
       return response.data;
     } catch (error) {
       console.error('Error fetching user statistics:', error);

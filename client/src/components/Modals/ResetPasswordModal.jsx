@@ -50,7 +50,7 @@ const ResetPasswordModal = ({ isOpen, onClose, userId, initialData = {} }) => {
       setLoading(true);
       
       // Call API to send password reset email
-      await UserService.sendPasswordResetEmail(userId, email);
+      await UserService.sendPasswordResetEmail(email);
       
       alert('Password reset email has been sent successfully');
       onClose();

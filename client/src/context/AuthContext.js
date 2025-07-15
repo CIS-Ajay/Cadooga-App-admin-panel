@@ -116,7 +116,6 @@ export const AuthProvider = ({ children }) => {
     // Update state
     setToken(null);
     setUser(null);
-    // window.location.href = '/admin/login';
   };
   
   // Check if user is super admin

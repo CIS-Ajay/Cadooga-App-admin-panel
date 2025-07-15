@@ -82,7 +82,10 @@ const AdminPage = () => {
       case 'admins':
         navigate('/admin/admins');
         break;
-      case 'bannedusers':
+      case 'logs':
+        navigate('/admin/logs');
+        break;
+        case 'bannedusers':
         navigate('/admin/banned-users');  
         break;
       default:

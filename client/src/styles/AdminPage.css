@@ -1,5 +1,13 @@
 /* AdminPage.css - Independent styling for AdminPage only */
 
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
 /* ========== LAYOUT ========== */
 .home-container {
   display: flex;
@@ -71,6 +79,27 @@
 
 .create-admin-button:hover {
   background-color: #357abD;
+}
+
+.logs-view{
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.logs-view:hover {
+  background-color: #357abD;
+  color: white;
 }
 
 .button-icon {

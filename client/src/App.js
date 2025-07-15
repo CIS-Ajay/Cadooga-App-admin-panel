@@ -12,6 +12,8 @@ import HomePage from './components/admin/HomePage';
 import AdminPage from './components/admin/AdminPage';
 import UserDetailsPage from './components/UserDetails/UserDetailsPage';
 import './App.css';
+import UserActivityLogs from './components/admin/UserActivityLogs';
+import ForgotPassword from './components/admin/ForgotPassword';
 
 // Protected route component
 const ProtectedRoute = ({ children }) => {
@@ -51,6 +53,7 @@ const App = () => {
           <Route path="/login" element={<AdminLogin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/reset-password" element={<ResetPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
 
           {/* Protected admin routes - Pages with their own layout */}
           <Route path="/admin/home" element={
@@ -74,6 +77,11 @@ const App = () => {
           <Route path="/admin/admins" element={
             <ProtectedRoute>
               <AdminPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/logs" element={
+            <ProtectedRoute>
+              <UserActivityLogs />
             </ProtectedRoute>
           } />
           <Route
